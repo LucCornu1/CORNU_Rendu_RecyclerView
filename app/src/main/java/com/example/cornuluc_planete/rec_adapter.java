@@ -4,6 +4,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,10 +16,14 @@ public class rec_adapter extends RecyclerView.Adapter<rec_adapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         //Y declarer les objets de la vue qui seront chargés (par le tableau de données)
         public TextView mTextView;
+        public TextView description;
+        public ImageView image;
         //Constructeur du holder : le viewHolder a une reference vers tous les objets de la liste
         public ViewHolder(View v) {
             super(v);
-            mTextView = (TextView) v.findViewById(R.id.title);
+            mTextView = (TextView) v.findViewById(R.id.textview_List_Title);
+            description = (TextView) v.findViewById(R.id.textview_List_Description);
+            image = (ImageView) v.findViewById(R.id.img_List);
         }
     }
 
@@ -40,7 +45,8 @@ public class rec_adapter extends RecyclerView.Adapter<rec_adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.mTextView.setText(mDataSet[position]);
-        Log.d("debug", "onBindViewHolder: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        holder.description.setText("JaaJ");
+        holder.image.setImageResource(R.drawable.small);
     }
 
     //Nombre d’éléments de la liste
