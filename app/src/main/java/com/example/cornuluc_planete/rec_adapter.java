@@ -49,7 +49,7 @@ public class rec_adapter extends RecyclerView.Adapter<rec_adapter.ViewHolder> {
         final Planete planetes = planeteList.get(position);
         holder.mTextView.setText(planetes.getPlaneteName());
         holder.description.setText(planetes.getplaneteDescription());
-        holder.image.setImageResource(R.drawable.small);
+        holder.image.setImageResource(planetes.getplaneteId());
     }
 
     //Nombre d’éléments de la liste

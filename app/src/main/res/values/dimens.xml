@@ -2,4 +2,5 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="size_row32">32dp</dimen>
+    <dimen name="size_row64">64dp</dimen>
 </resources>

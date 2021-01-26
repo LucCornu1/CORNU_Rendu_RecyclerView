@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView monRecyclerView;
     private RecyclerView.Adapter monAdapter;
     private RecyclerView.LayoutManager monLayoutManager;
-    private String[] monDataset = {"Terre", "Mars", "Saturne", "Pluton", "Uranus",
-            "Neptune"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,42 +35,50 @@ public class MainActivity extends AppCompatActivity {
     private void initList(ArrayList<Planete> planeteList) {
         Planete planete = new Planete();
         planete.setPlaneteName("Mercure");
-        planete.setPlaneteDescription("0");
+        planete.setPlaneteDescription("Non-habitable");
+        planete.setplaneteId(getResources().getIdentifier("mercure" , "drawable", getPackageName()));
         planeteList.add(planete);
 
         planete = new Planete();
         planete.setPlaneteName("Venus");
-        planete.setPlaneteDescription("1");
+        planete.setPlaneteDescription("Non-habitable");
+        planete.setplaneteId(getResources().getIdentifier("venus" , "drawable", getPackageName()));
         planeteList.add(planete);
 
         planete = new Planete();
         planete.setPlaneteName("Terre");
-        planete.setPlaneteDescription("3");
+        planete.setPlaneteDescription("Habitable");
+        planete.setplaneteId(getResources().getIdentifier("terre" , "drawable", getPackageName()));
         planeteList.add(planete);
 
         planete = new Planete();
         planete.setPlaneteName("Mars");
-        planete.setPlaneteDescription("4");
+        planete.setPlaneteDescription("Non-habitable");
+        planete.setplaneteId(getResources().getIdentifier("mars" , "drawable", getPackageName()));
         planeteList.add(planete);
 
         planete = new Planete();
         planete.setPlaneteName("Jupiter");
-        planete.setPlaneteDescription("5");
+        planete.setPlaneteDescription("Non-habitable");
+        planete.setplaneteId(getResources().getIdentifier("jupiter" , "drawable", getPackageName()));
         planeteList.add(planete);
 
         planete = new Planete();
         planete.setPlaneteName("Saturne");
-        planete.setPlaneteDescription("6");
+        planete.setPlaneteDescription("Non-habitable");
+        planete.setplaneteId(getResources().getIdentifier("saturne" , "drawable", getPackageName()));
         planeteList.add(planete);
 
         planete = new Planete();
         planete.setPlaneteName("Uranus");
-        planete.setPlaneteDescription("7");
+        planete.setPlaneteDescription("Non-habitable");
+        planete.setplaneteId(getResources().getIdentifier("uranus" , "drawable", getPackageName()));
         planeteList.add(planete);
 
         planete = new Planete();
         planete.setPlaneteName("Neptune");
-        planete.setPlaneteDescription("8");
+        planete.setPlaneteDescription("Non-habitable");
+        planete.setplaneteId(getResources().getIdentifier("neptune" , "drawable", getPackageName()));
         planeteList.add(planete);
     }
 }

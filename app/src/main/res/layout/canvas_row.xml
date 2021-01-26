@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="@dimen/size_row32"
+    android:layout_height="@dimen/size_row64"
     android:layout_width="match_parent"
     android:orientation="horizontal">
 
