@@ -28,11 +28,11 @@ public class Planete {
 
 
     // Setters (Mutateurs)
-    public void setVersionName(String planeteName) {
+    public void setPlaneteName(String planeteName) {
         this.planeteName = planeteName;
     }
 
-    public void setVersionNumber(String planeteDescription) {
+    public void setPlaneteDescription(String planeteDescription) {
         this.planeteDescription = planeteDescription;
     }
 }

@@ -9,8 +9,10 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class rec_adapter extends RecyclerView.Adapter<rec_adapter.ViewHolder> {
-    private String[] mDataSet; //Déclarer votre tableau de données
+    private ArrayList<Planete> planeteList;
 
     //Le viewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -28,8 +30,8 @@ public class rec_adapter extends RecyclerView.Adapter<rec_adapter.ViewHolder> {
     }
 
     //Constructeur de l'adaptateur : initialisations de l’adapter et des données
-    public rec_adapter(String[] monDataset) {
-        mDataSet = monDataset;
+    public rec_adapter(ArrayList<Planete> planeteList) {
+        this.planeteList = planeteList;
     }
 
     //Chargement du layout et initialisation du viewHolder
@@ -44,14 +46,15 @@ public class rec_adapter extends RecyclerView.Adapter<rec_adapter.ViewHolder> {
     //Lien entre viewHolder et données
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        holder.mTextView.setText(mDataSet[position]);
-        holder.description.setText("JaaJ");
+        final Planete planetes = planeteList.get(position);
+        holder.mTextView.setText(planetes.getPlaneteName());
+        holder.description.setText(planetes.getplaneteDescription());
         holder.image.setImageResource(R.drawable.small);
     }
 
     //Nombre d’éléments de la liste
     @Override
     public int getItemCount() {
-        return mDataSet.length;
+        return planeteList.size();
     }
 }//Fin de la classe de l’adaptateur
